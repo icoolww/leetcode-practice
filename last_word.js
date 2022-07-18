@@ -26,10 +26,14 @@ var lengthOfLastWord = function(s) {
 };
   
 
+// another approach
+// identify the whitespcae
+
+var lengthOfLastWord = function(s) {
+    s = s.replace(/^\s+|\s+$/g,'');
+    var arr = s.split(' ');
+    return arr[arr.length-1].length;
+};
+
   
-  // var lengthOfLastWord = function(s) {
-      
-  //   // removing white spaces from start and the end
-  //   let arr = s.trim().split(" ");
-  //   return arr[arr.length - 1].length;
-  // };
+ 
